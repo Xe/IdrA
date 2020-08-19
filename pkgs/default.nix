@@ -2,8 +2,11 @@
 
 rec {
   gcc = pkgs.callPackage ./gcc { };
+  zig = pkgs.callPackage ./zig { };
 
   sinit = pkgs.pkgsMusl.callPackage ./sinit {
-    rcinit = "/etc/rc.init";
+    rcinit = "/rc/init";
+    rcshutdown = "/rc/shutdown";
+    rcreboot = "/rc/shutdown";
   };
 }
