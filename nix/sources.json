@@ -5,10 +5,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "e82eb322ea32a747a51c431d7787221bcc6d9038",
-        "sha256": "1fy4dcr05d80diwlxmh42xnjm5ki1pkbky38smvlqjaky2y2f71f",
+        "rev": "d13bf5ff11850f49f4282d59b25661c45a851936",
+        "sha256": "06hg0i173dia99bcv8si8qqwdw0ymbngsilz2s182d4afsnylq5z",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/e82eb322ea32a747a51c431d7787221bcc6d9038.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/d13bf5ff11850f49f4282d59b25661c45a851936.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -17,10 +17,23 @@
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "b78e08e981a9ad31036fc6c6fb880c1315b4ebea",
-        "sha256": "11gayn93qh5zj41i5cvx20fab3snj0s2mwd0d6z2hjkkiq7b98g3",
+        "rev": "54acf58040890cf9449bea55b5693b42c13844b9",
+        "sha256": "00a7x92j26r4mmlyp4hmhg13lxb6x47lv2dq029dd3p9l4bymrip",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/b78e08e981a9ad31036fc6c6fb880c1315b4ebea.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/54acf58040890cf9449bea55b5693b42c13844b9.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "sinit": {
+        "ref": "master",
+        "repo": "git://git.suckless.org/sinit",
+        "rev": "28c44b6b94a870f2942c37f9cfbae8b770595712",
+        "type": "git"
+    },
+    "zig": {
+        "sha256": "1wkv0826w9bgz1qqcj09gzgdm1i1f7967878nyhbln9lpyf9qibp",
+        "type": "file",
+        "url": "https://ziglang.org/builds/zig-linux-x86_64-0.6.0+83b0e5207.tar.xz",
+        "url_template": "https://ziglang.org/builds/zig-linux-x86_64-<version>.tar.xz",
+        "version": "0.6.0+83b0e5207"
     }
 }

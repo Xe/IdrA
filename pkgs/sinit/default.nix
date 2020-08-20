@@ -5,15 +5,13 @@ let
       baseName = "sinit";
       version = "1.1";
       name = "${baseName}-${version}";
-      url = "https://git.suckless.org/sinit/";
-      sha256 = "0cf8yylgrrj1wxm5v6jdlbnxpx97m38yxrc9nmv1l8hldjqsj9pc";
-      rev = "refs/tags/v${version}";
     };
   buildInputs = [ (stdenv.lib.getOutput "static" stdenv.cc.libc) zig ];
+  sources = import ../../nix/sources.nix;
 in stdenv.mkDerivation {
   inherit (s) name version;
   inherit buildInputs;
-  src = fetchgit { inherit (s) url sha256 rev; };
+  src = sources.sinit;
   makeFlags = [ "PREFIX=$(out)" ];
   patches = [ ./zig.patch ];
   preConfigure = "" + (stdenv.lib.optionalString (rcinit != null)
