@@ -1,7 +1,6 @@
 { sources ? import ../nix/sources.nix, pkgs ? import sources.nixpkgs { } }:
 
 rec {
-  gcc = pkgs.callPackage ./gcc { };
   zig = pkgs.callPackage ./zig { };
 
   kernel = pkgs.callPackage ./kernel { };
@@ -9,6 +8,7 @@ rec {
     rcinit = "/rc/startup";
     rcshutdown = "/rc/shutdown";
     rcreboot = "/rc/shutdown";
+    inherit zig;
   };
   startup = pkgs.callPackage ./startup { inherit zig; };
 }

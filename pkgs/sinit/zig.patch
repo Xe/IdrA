@@ -1,0 +1,17 @@
+diff --git a/config.mk b/config.mk
+index 46638b5..6ffda0a 100644
+--- a/config.mk
++++ b/config.mk
+@@ -2,10 +2,11 @@
+ VERSION = 1.1
+
+ # paths
++HOME = ${TMPDIR}
+ PREFIX = /usr/local
+ MANPREFIX = $(PREFIX)/share/man
+
+-CC = cc
++CC := zig cc
+ LD = $(CC)
+ CPPFLAGS =
+ CFLAGS   = -Wextra -Wall -Os

@@ -4,7 +4,7 @@ stdenv.mkDerivation rec {
   pname = "startup";
   version = "0.1.0";
   src = ./src;
-  buildInputs = [zig];
+  buildInputs = [ zig ];
   phases = "buildPhase installPhase";
   buildPhase = ''
     export HOME=$TMPDIR;

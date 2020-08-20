@@ -1,20 +1,21 @@
-{ stdenv, fetchgit, rcinit ? null, rcshutdown ? null, rcreboot ? null }:
+{ stdenv, fetchgit, rcinit ? null, rcshutdown ? null, rcreboot ? null, zig }:
 let
   s = # Generated upstream information
     rec {
       baseName = "sinit";
-      version = "1.0";
+      version = "1.1";
       name = "${baseName}-${version}";
       url = "https://git.suckless.org/sinit/";
       sha256 = "0cf8yylgrrj1wxm5v6jdlbnxpx97m38yxrc9nmv1l8hldjqsj9pc";
       rev = "refs/tags/v${version}";
     };
-  buildInputs = [ (stdenv.lib.getOutput "static" stdenv.cc.libc) ];
+  buildInputs = [ (stdenv.lib.getOutput "static" stdenv.cc.libc) zig ];
 in stdenv.mkDerivation {
   inherit (s) name version;
   inherit buildInputs;
   src = fetchgit { inherit (s) url sha256 rev; };
   makeFlags = [ "PREFIX=$(out)" ];
+  patches = [ ./zig.patch ];
   preConfigure = "" + (stdenv.lib.optionalString (rcinit != null)
     ''sed -re 's@(rcinitcmd[^"]*")[^"]*"@\1${rcinit}"@' -i config.def.h; '')
     + (stdenv.lib.optionalString (rcshutdown != null) ''
