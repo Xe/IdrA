@@ -11,7 +11,7 @@ stdenv.mkDerivation rec {
   };
   buildInputs =
     [ bison ncurses pkg-config flex openssl elfutils bc gawk hostname perl ];
-  makeFlags = [ "vmlinux" ];
+  makeFlags = [ "vmlinux" "-j12" ];
 
   patchPhase = ''
     cp ${./Kconfig} .config

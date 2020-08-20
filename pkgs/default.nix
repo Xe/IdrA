@@ -1,9 +1,10 @@
 { sources ? import ../nix/sources.nix, pkgs ? import sources.nixpkgs { } }:
 
 rec {
+  kernel = pkgs.callPackage ./kernel { };
+
   zig = pkgs.callPackage ./zig { };
 
-  kernel = pkgs.callPackage ./kernel { };
   sinit = pkgs.pkgsMusl.callPackage ./sinit {
     rcinit = "/rc/startup";
     rcshutdown = "/rc/shutdown";
