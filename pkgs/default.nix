@@ -9,4 +9,5 @@ rec {
     rcshutdown = "/rc/shutdown";
     rcreboot = "/rc/shutdown";
   };
+  startup = pkgs.callPackage ./startup { inherit zig; };
 }

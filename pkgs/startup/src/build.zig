@@ -16,6 +16,7 @@ pub fn build(b: *Builder) void {
     exe.setBuildMode(mode);
     exe.linkLibC();
     exe.addIncludeDir(".");
+    exe.strip = true;
 
     const source_files = [_][]const u8 {
         "./startup/reboot.c"

@@ -6,8 +6,8 @@ pub usingnamespace @cImport({
 });
 
 pub fn main() anyerror!void {
-    std.log.info(logo, .{});
-    std.log.info("\nstarting up", .{});
+    std.debug.print(logo, .{});
+    std.debug.print("\n\nstarting up\n", .{});
 
     do_reboot();
 }
