@@ -5,7 +5,7 @@ rec {
 
   zig = pkgs.callPackage ./zig { };
 
-  sinit = pkgs.pkgsMusl.callPackage ./sinit {
+  sinit = pkgs.callPackage ./sinit {
     rcinit = "/rc/startup";
     rcshutdown = "/rc/shutdown";
     rcreboot = "/rc/shutdown";
