@@ -4,6 +4,7 @@ rec {
   gcc = pkgs.callPackage ./gcc { };
   zig = pkgs.callPackage ./zig { };
 
+  kernel = pkgs.callPackage ./kernel { };
   sinit = pkgs.pkgsMusl.callPackage ./sinit {
     rcinit = "/rc/startup";
     rcshutdown = "/rc/shutdown";
