@@ -9,6 +9,7 @@ stdenv.mkDerivation rec {
   buildPhase = ''
     export HOME=$TMPDIR;
     cp -rf $src/* .
+    chmod a+w .
     zig build -Drelease-fast -Dtarget=native-linux-musl
   '';
   installPhase = ''

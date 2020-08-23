@@ -12,4 +12,6 @@ rec {
     inherit zig;
   };
   startup = pkgs.callPackage ./startup { inherit zig; };
+
+  basefiles = pkgs.callPackage ./basefiles { inherit sinit startup; };
 }
