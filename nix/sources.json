@@ -1,4 +1,16 @@
 {
+    "ip": {
+        "sha256": "1hlq2zsilddzgr5x0lnq5d0fiy28nbclvq7hap2psyj484k6386m",
+        "type": "file",
+        "url": "http://pkg.musl.cc/iproute2/x86_64-linux-musl/sbin/ip",
+        "url_template": "http://pkg.musl.cc/iproute2/x86_64-linux-musl/sbin/ip"
+    },
+    "mount": {
+        "sha256": "1986v2b5pywcjqm9i51szysngv89ifhp8ggfb3sqm4lfjsja7lp7",
+        "type": "file",
+        "url": "http://pkg.musl.cc/util-linux/x86_64-linux-musl/bin/mount",
+        "url_template": "http://pkg.musl.cc/util-linux/x86_64-linux-musl/bin/mount"
+    },
     "niv": {
         "branch": "master",
         "description": "Easy dependency management for Nix projects",
