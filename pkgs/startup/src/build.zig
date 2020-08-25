@@ -19,8 +19,7 @@ pub fn build(b: *Builder) void {
     exe.strip = true;
 
     const source_files = [_][]const u8 {
-        "./startup/reboot.c",
-        "./startup/mknod.c"
+        "./startup/reboot.c"
     };
 
     for (source_files) |source| {
