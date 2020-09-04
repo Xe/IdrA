@@ -1,8 +1,6 @@
 { sources ? import ../nix/sources.nix, pkgs ? import sources.nixpkgs { } }:
 
 rec {
-  kernel = pkgs.callPackage ./kernel { };
-
   zig = pkgs.callPackage ./zig { };
 
   sinit = pkgs.callPackage ./sinit {
@@ -14,4 +12,6 @@ rec {
   startup = pkgs.callPackage ./startup { inherit zig; };
 
   basefiles = pkgs.callPackage ./basefiles { inherit sinit startup; };
+
+  kernel = pkgs.callPackage ./kernel { inherit basefiles; };
 }

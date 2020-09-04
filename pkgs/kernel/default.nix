@@ -1,5 +1,5 @@
 { stdenv, fetchurl, bison, ncurses, pkg-config, flex, openssl, elfutils, bc
-, gawk, hostname, perl }:
+, gawk, hostname, perl, basefiles }:
 
 stdenv.mkDerivation rec {
   pname = "kernel-wasmcloud";
@@ -16,6 +16,7 @@ stdenv.mkDerivation rec {
   patchPhase = ''
     cp ${./Kconfig} .config
     sed -i scripts/ld-version.sh -e "s|/usr/bin/awk|${gawk}/bin/awk|"
+    sed -i .config -e "s|@basefiles@|${basefiles}|"
   '';
 
   installPhase = ''
