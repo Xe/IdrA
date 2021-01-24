@@ -17,10 +17,10 @@
         "homepage": "https://github.com/nmattia/niv",
         "owner": "nmattia",
         "repo": "niv",
-        "rev": "9d35b9e4837ab88517210b1701127612c260eccf",
-        "sha256": "0q50xhnm8g2yfyakrh0nly4swyygxpi0a8cb9gp65wcakcgvzvdh",
+        "rev": "3cd7914b2c4cff48927e11c216dadfab7d903fe5",
+        "sha256": "1agq4nvbhrylf2s77kb4xhh9k7xcwdwggq764k4jgsbs70py8cw3",
         "type": "tarball",
-        "url": "https://github.com/nmattia/niv/archive/9d35b9e4837ab88517210b1701127612c260eccf.tar.gz",
+        "url": "https://github.com/nmattia/niv/archive/3cd7914b2c4cff48927e11c216dadfab7d903fe5.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs": {
@@ -36,16 +36,17 @@
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "sinit": {
+        "branch": "master",
         "ref": "master",
         "repo": "git://git.suckless.org/sinit",
         "rev": "28c44b6b94a870f2942c37f9cfbae8b770595712",
         "type": "git"
     },
     "zig": {
-        "sha256": "1i0y720hbf2xggrsizybxqza5flgzadxy5pc0x19956m1mzbnspd",
+        "sha256": "12np1ap73xprfw1n5755prd49mb60lhh3rkx8n2fgfbiwb1dj6nx",
         "type": "file",
-        "url": "https://ziglang.org/builds/zig-linux-x86_64-0.6.0+ee0ba9ec7.tar.xz",
+        "url": "https://ziglang.org/builds/zig-linux-x86_64-0.8.0-dev.1039+bea791b63.tar.xz",
         "url_template": "https://ziglang.org/builds/zig-linux-x86_64-<version>.tar.xz",
-        "version": "0.6.0+ee0ba9ec7"
+        "version": "0.8.0-dev.1039+bea791b63"
     }
 }

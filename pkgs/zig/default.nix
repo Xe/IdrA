@@ -8,9 +8,13 @@ in pkgs.stdenv.mkDerivation {
   name = "zig";
   inherit src version;
 
+  phases = "unpackPhase installPhase";
+
+  unpackPhase = "${pkgs.gnutar}/bin/tar xJf $src";
+
   installPhase = ''
     mkdir -p $out
-    cp -rf * $out
+    cp -rf zig*/* $out
     mkdir -p $out/bin
     mv $out/zig $out/bin/zig
   '';

@@ -3,3 +3,4 @@ result*
 *.ext4
 *.tar.gz
 *.tgz
+/khack/*

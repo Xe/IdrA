@@ -3,11 +3,11 @@
 
 stdenv.mkDerivation rec {
   pname = "kernel-wasmcloud";
-  version = "5.8.1";
+  version = "5.10.10";
   src = fetchurl {
     url =
       "https://cdn.kernel.org/pub/linux/kernel/v5.x/linux-${version}.tar.xz";
-    sha256 = "09574qbcrncb34dx9pd65iqs06758zim4nkncnjzmxwgjgza9lpq";
+    sha256 = "06fvgkrn9127xw9kly6l4ws3yv80q8xfqdzaam92lljim5pqdvb0";
   };
   buildInputs =
     [ bison ncurses pkg-config flex openssl elfutils bc gawk hostname perl ];
