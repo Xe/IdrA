@@ -14,6 +14,6 @@ stdenv.mkDerivation rec {
   '';
   installPhase = ''
     mkdir -p $out/rc
-    mv ./zig-cache/bin/startup $out/rc/startup
+    mv ./zig-out/bin/startup $out/rc/startup
   '';
 }

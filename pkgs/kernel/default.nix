@@ -2,7 +2,7 @@
 , gawk, hostname, perl }:
 
 stdenv.mkDerivation rec {
-  pname = "kernel-wasmcloud";
+  pname = "kernel-trisiel";
   version = "5.10.10";
   src = fetchurl {
     url =
